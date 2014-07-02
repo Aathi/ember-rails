@@ -1,0 +1,53 @@
+<header>
+  <article>
+    <div class="logo">
+      <h1>
+        <%= link_to "EmberCRM", '#' %>
+      </h1>
+    </div>
+  </article>
+</header>
+<section id="main">
+  <article id="leads">
+    <h1>Leads</h1>
+    <ul>
+      <% 15.times do %>
+        <li>
+          <%= Faker::Name.name %>
+        </li>
+      <% end %>
+    </ul>
+  </article>
+  <article id="lead">
+    <h1>
+      Rob Stark
+      <%= link_to "edit", "#", class: 'edit' %>
+    </h1>
+    <p>
+      Name: Rob Stark
+    </p>
+    <p>
+      Email: rob@winterfell.com
+    </p>
+    <p>
+      Phone: (214) 555 - 3223
+    </p>
+    <p>
+      <label>Status:</label>
+      <select>
+        <option>(value='new') new</option>
+        <option>(value='in progress') in progress</option>
+        <option>(value='closed') closed</option>
+        <option>(value='bad') bad</option>
+      </select>
+    </p>
+    <p>
+      <label>Notes:</label>
+      <br/>
+      <textarea></textarea>
+    </p>
+    <p>
+      <input>(type='submit' value='Save Changes')</input>
+    </p>
+  </article>
+</section>

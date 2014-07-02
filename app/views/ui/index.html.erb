@@ -1,0 +1,11 @@
+<h1>UI Directory</h1>
+<ul>
+  <% Dir.glob('app/views/ui/*.html.haml').sort.each do |file| %>
+    <% wireframe = File.basename(file,'.html.haml') %>
+    <% unless wireframe == 'index' || wireframe.match(/^_/) %>
+      <li>
+        <%= link_to wireframe.titleize, action: wireframe unless wireframe == 'index' %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
